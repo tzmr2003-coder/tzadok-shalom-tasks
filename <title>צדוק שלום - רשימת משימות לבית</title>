@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>צדוק שלום - רשימת משימות לבית</title>
+    <meta name="description" content="רשימת משימות פשוטה ונקייה לבית, לניהול מטלות יומיות ושבועיות.">
+    <meta name="robots" content="index, follow"> 
+</head>
+<body>
+    
+    <div class="todo-app">
+        <h1>רשימת משימות לבית <span role="img" aria-label="מטלה">✅</span></h1>
+        
+        <div class="row">
+            <input type="text" id="input-box" placeholder="הוסף משימה חדשה..." onkeydown="if(event.key === 'Enter') addTask()">
+            <button onclick="addTask()">הוסף</button> 
+        </div>
+        
+        <ul id="list-container">
+        </ul>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
