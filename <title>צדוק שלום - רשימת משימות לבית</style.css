@@ -1,0 +1,112 @@
+body {
+    background: linear-gradient(135deg, #153677, #4e085f); 
+    font-family: sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.todo-app {
+    width: 90%;
+    max-width: 540px;
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h1 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    direction: rtl; 
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-right: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+    flex: 1; 
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px 10px;
+    font-size: 16px;
+    text-align: right;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 14px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+#list-container li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #000;
+    text-align: right;
+}
+
+/* הוספת אייקון אישור (ריבוע ריק) */
+#list-container li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("https://i.imgur.com/B9B9z60.png"); 
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    right: 8px; 
+}
+
+/* עיצוב משימה שסומנה כ'בצעה' */
+#list-container li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* שינוי אייקון האישור ל-V ירוק */
+#list-container li.checked::before {
+    background-image: url("https://i.imgur.com/8Qj8W89.png"); 
+}
+
+/* עיצוב כפתור המחיקה (X) */
+#list-container li span {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* אפקט ריחוף על כפתור המחיקה */
+#list-container li span:hover {
+    background: #edeef0;
+}
